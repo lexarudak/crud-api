@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        // "module": "NodeNext",
+        // "moduleResolution": "NodeNext", //это для ноды
+            "target": "es5",           
+        "module": "commonjs",       
+        "sourceMap": false,
+        "outDir": "./dist",  
+        "strict": true        
+    },
+    "include": ["./*"],
+    "exclude": ["node_modules"],
+    "watch": true,
+}

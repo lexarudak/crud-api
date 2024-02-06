@@ -1,0 +1,28 @@
+{
+  "name": "crud-api",
+  "version": "1.0.0",
+  "description": "node js rss project",
+  "main": "dist/index.js",
+  "scripts": {
+    "node-watch": "ts-node-dev --respawn --transpile-only ./index.ts",
+    "dev": "tsc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lexarudak/crud-api.git"
+  },
+  "author": "Aliaksei Rudak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lexarudak/crud-api/issues"
+  },
+  "homepage": "https://github.com/lexarudak/crud-api#readme",
+  "dependencies": {
+    "eslint": "^8.56.0",
+    "prettier": "^3.2.5",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.3",
+    "webpack": "^5.90.1"
+  }
+}
