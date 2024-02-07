@@ -1,4 +1,6 @@
-import Server from "./src/server"
+import { config } from 'dotenv'
+import server from "./src/server"
 
-const server = new Server()
+config()
+
 server.start()

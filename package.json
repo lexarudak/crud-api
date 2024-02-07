@@ -4,8 +4,8 @@
   "description": "node js rss project",
   "main": "dist/index.js",
   "scripts": {
-    "node-watch": "ts-node-dev --respawn --transpile-only ./index.ts",
-    "dev": "tsc --watch"
+    "dev": "ts-node-dev --respawn --transpile-only ./index.ts",
+    "ts-watch": "tsc --watch"
   },
   "repository": {
     "type": "git",
@@ -18,11 +18,16 @@
   },
   "homepage": "https://github.com/lexarudak/crud-api#readme",
   "dependencies": {
+    "dotenv": "^16.4.1",
     "eslint": "^8.56.0",
     "prettier": "^3.2.5",
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.3.3",
+    "uuid": "^9.0.1",
     "webpack": "^5.90.1"
+  },
+  "devDependencies": {
+    "@types/uuid": "^9.0.8"
   }
 }
