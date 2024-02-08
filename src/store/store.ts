@@ -1,11 +1,13 @@
-type User = {
+export type User = {
   id: string,
   username: string,
   age: number,
   hobbies: string[]
 }
 
-export const store = new Map<string, User>()
+export type Store = Map<string, User>
+
+export const store:Store = new Map<string, User>()
 
 store.set("TEST_ID", {
       id: "TEST_ID",

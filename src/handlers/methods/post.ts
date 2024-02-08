@@ -1,11 +1,11 @@
 import { ServerResponse } from 'http';
 import errorHandler from '../errorHandler';
 import { errors } from '../../utils/messages';
-import { store } from '../../store/store';
+import { Store } from '../../store/store';
 import { v4 } from "uuid"
 
 
-export const post = (body: any, res: ServerResponse) => {
+export const post = (body: any, res: ServerResponse, store: Store) => {
   try {
     const { username, age, hobbies } = body
     

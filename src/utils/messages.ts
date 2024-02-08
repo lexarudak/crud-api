@@ -1,5 +1,6 @@
 export const getMessage = (...args: string[]) => ({
   listenPort: `Server listen port ${args[0]}`,
+  listenDefaultPort: `PORT did not found in .env file.\nServer listen default port ${args[0]}`
 })
 
 export const errors = {

@@ -1,10 +1,10 @@
 import { ServerResponse } from 'http';
 import errorHandler from '../errorHandler';
 import { errors } from '../../utils/messages';
-import { store } from '../../store/store';
+import { Store } from '../../store/store';
 
 
-export const deleteUser = (id: string, res: ServerResponse) => {
+export const deleteUser = (id: string, res: ServerResponse, store: Store) => {
    try {
     const user = store.get(id)
     if (!user) {

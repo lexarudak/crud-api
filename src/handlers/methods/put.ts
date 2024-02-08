@@ -1,10 +1,10 @@
 import { ServerResponse } from 'http';
 import errorHandler from '../errorHandler';
 import { errors } from '../../utils/messages';
-import { store } from '../../store/store';
+import { Store } from '../../store/store';
 
 
-export const put = (id: string, body: any, res: ServerResponse) => {
+export const put = (id: string, body: any, res: ServerResponse, store: Store) => {
    try {
     const { username, age, hobbies } = body
     const user = store.get(id)

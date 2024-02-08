@@ -1,14 +1,14 @@
 {
     "compilerOptions": {
-        // "module": "NodeNext",
-        // "moduleResolution": "NodeNext", //это для ноды
-            "target": "es5",           
+        "types": ["node", "jest", "supertest"],
+        "target": "es5",           
         "module": "commonjs",       
         "sourceMap": false,
-        "outDir": "./dist",  
-        "strict": true        
+        "outDir": "./dev_dist",  
+        "strict": true,
+        "esModuleInterop": true,
     },
-    "include": ["./*"],
+    "include": ["./*", "src/tests"],
     "exclude": ["node_modules"],
     "watch": true,
 }
