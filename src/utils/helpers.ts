@@ -6,8 +6,7 @@ export const splitUrl = (url = '') => {
   const [, api, users, uuid, other] = url.split("/")
   return {
     uuid,
-    isUrlValid: [api, users].join('/') === BASE_PATH && !other,
-    uuidNotFound: uuid === ''
+    isUrlValid: [api, users].join('/') === BASE_PATH && !other
     }
 }
 

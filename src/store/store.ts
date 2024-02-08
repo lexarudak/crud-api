@@ -1,24 +1,18 @@
 type User = {
   id: string,
   username: string,
-  age: string,
+  age: number,
   hobbies: string[]
 }
 
-type Store = {
-  users: User[]
-}
+export const store = new Map<string, User>()
 
-export const store: Store = {
-  users: [
-    {
+store.set("TEST_ID", {
       id: "TEST_ID",
       username: "testUsername",
-      age: 'testAge',
+      age: 40,
       hobbies: [
         "1 hobby",
         "2 hobby"
       ]
-    }
-  ]
-}
+    })

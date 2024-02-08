@@ -15,10 +15,9 @@ export const post = (body: any, res: ServerResponse) => {
       age,
       hobbies
     }
-    const isUserCorrect = checkUser(user)
 
-    if (isUserCorrect) {
-      store.users.push(user)
+    if (isUserCorrect(user)) {
+      store.set(user.id, user)
       res.statusCode = 201
       res.end(JSON.stringify(user))
     } else {
@@ -31,6 +30,10 @@ export const post = (body: any, res: ServerResponse) => {
 
 }
 
-function checkUser (user: any) {
-  return ([typeof user.username === "string", typeof user.age === "number", user.hobbies.every((item: any) => typeof item === 'string')].every(check => check === true))
+function isUserCorrect (user: any) {
+  try {
+     return ([typeof user.username === "string", typeof user.age === "number", user.hobbies.every((item: any) => typeof item === 'string')].every(check => check === true))
+  } catch {
+    return false
+  }
 }

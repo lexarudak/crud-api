@@ -5,11 +5,11 @@ import { errors } from '../../utils/messages';
 
 export const getUsers = (res: ServerResponse) => {
   res.statusCode = 200
-  res.end(JSON.stringify(store.users))
+  res.end(JSON.stringify(Array.from(store.values())))
 }
 
 export const getUser = (res: ServerResponse, uuid: string) => {
-  const user = store.users.find(({id}) => id === uuid)
+  const user = store.get(uuid)
   if (!user) {
     errorHandler(res, 404, errors.idNotExist)
     return
