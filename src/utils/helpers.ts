@@ -26,3 +26,8 @@ export const getBody = (req: IncomingMessage) => new Promise((res) => {
     }
   });
 })
+
+export const isMulti = () => {
+  const [flag] = process.argv.slice(2)
+  return flag === "--multi"
+}

@@ -6,6 +6,8 @@
   "scripts": {
     "start:dev": "ts-node-dev --respawn --transpile-only ./index.ts",
     "start:prod": "npm run build && node dist/server.js",
+    "start:multi": "ts-node-dev --respawn --transpile-only ./index.ts --multi",
+    "start:multi-prod": "npm run build && node dist/server.js --multi",
     "build": "webpack --mode production",
     "ts-watch": "tsc --watch",
     "test": "jest --watch"
