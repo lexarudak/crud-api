@@ -3,7 +3,6 @@ import { errors, getMessage } from './utils/messages'
 import { isMulti, splitUrl } from "./utils/helpers"
 import requestHandler from './handlers/requestHandler'
 import errorHandler from './handlers/errorHandler'
-import { config } from 'dotenv'
 import { Store } from './store/store'
 import cluster from 'cluster';
 
@@ -11,7 +10,7 @@ class Server {
   store: Store
   server: S
   constructor (store: Store) {
-    config()
+    
     this.store = store
     this.server = createServer((req, res) => {
       if (isMulti()) console.log(`Request handled by worker ${cluster?.worker?.id}`);
@@ -20,6 +19,7 @@ class Server {
 
       (method && method in requestHandler && isUrlValid) ?
         requestHandler[method](res, uuid, req, this.store) : errorHandler(res, 404, errors.noResource)
+      
     })
   }
 

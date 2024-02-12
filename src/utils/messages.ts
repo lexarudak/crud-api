@@ -12,5 +12,6 @@ export const errors = {
   wrongBodyType: "Body has wrong field types",
   putServerError: "Server error. PUT operation was not complete",
   deleteServerError: "Server error. DELETE operation was not complete",
+  proxyServerError: "Proxy server error. Operation was not complete",
   removeId: "Your request contain ID or '/'. Remove it for correct operation"
 }
